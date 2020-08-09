@@ -37,7 +37,7 @@ char *nbnoms[]={"Sebastian Moran", "irene Adler", "inspector Lestrade",
 
 volatile int synchro;
 
-void *fn_serveur_tcp(void *arg)
+void *fn_serveur_tcp(void *arg)//Fonction qui représente le thread
 {
         int sockfd, newsockfd, portno;
         socklen_t clilen;
@@ -145,7 +145,7 @@ int main(int argc, char ** argv)
         strcpy(gClientIpAddress,argv[3]);
         gClientPort=atoi(argv[4]);
         strcpy(gName,argv[5]);
-
+    //Initiallisation de la SDL
     SDL_Init(SDL_INIT_VIDEO);
 	TTF_Init();
  
